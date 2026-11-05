@@ -14,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/i18n.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -28,14 +29,16 @@
         </a>
 
         <nav class="main-nav" aria-label="Primary navigation">
-          <a href="#how-it-works">How it works</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#how-it-works" data-i18n="nav.how">How it works</a>
+          <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+          <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
         </nav>
 
         <div class="nav-actions">
-          <a href="#" class="link-btn">Log in</a>
-          <a href="#" class="btn btn-primary">Start Test</a>
+          <a href="#" class="link-btn" data-i18n="nav.login">Log in</a>
+          <a href="quiz.html" class="btn btn-primary" data-i18n="nav.start"
+            >Start Test</a
+          >
         </div>
       </div>
     </header>
@@ -43,20 +46,26 @@
     <main>
       <section class="hero container">
         <div class="hero-copy">
-          <h1>Know your IQ. Know yourself better.</h1>
-          <p>
+          <h1 data-i18n="hero.title">Know your IQ. Know yourself better.</h1>
+          <p data-i18n="hero.subtitle">
             Complete 40 questions on patterns, numbers, logic, and memory to get
             your IQ score and cognitive profile.
           </p>
-          <a href="#" class="btn btn-primary large">Start My IQ Test</a>
+          <a href="quiz.html" class="btn btn-primary large" data-i18n="hero.cta"
+            >Start My IQ Test</a
+          >
 
           <div
             class="trust-row"
             aria-label="Customer rating and review summary"
           >
             <div class="stars" aria-hidden="true">★★★★★</div>
-            <span>Rated 4.1 / 5 from 151,263 reviews.</span>
-            <span class="trustpilot">Trustpilot</span>
+            <span data-i18n="hero.rated"
+              >Rated 4.1 / 5 from 151,263 reviews.</span
+            >
+            <span class="trustpilot" data-i18n="hero.trustpilot"
+              >Trustpilot</span
+            >
           </div>
         </div>
 
@@ -120,23 +129,31 @@
         <div class="container stats-grid">
           <div class="stat-item">
             <div class="stat-number">80M+</div>
-            <div class="stat-label">Test takers worldwide</div>
+            <div class="stat-label" data-i18n="stats.takers">
+              Test takers worldwide
+            </div>
           </div>
           <div class="stat-item">
             <div class="stat-number">107</div>
-            <div class="stat-label">Average IQ score today</div>
+            <div class="stat-label" data-i18n="stats.avg">
+              Average IQ score today
+            </div>
           </div>
           <div class="stat-item">
             <div class="stat-number">150+</div>
-            <div class="stat-label">Cognitive training exercises</div>
+            <div class="stat-label" data-i18n="stats.training">
+              Cognitive training exercises
+            </div>
           </div>
         </div>
       </section>
 
       <section id="how-it-works" class="content-section container">
         <div class="section-header centered">
-          <h2>Discover your IQ score in three simple steps.</h2>
-          <p>
+          <h2 data-i18n="how.title">
+            Discover your IQ score in three simple steps.
+          </h2>
+          <p data-i18n="how.subtitle">
             Complete the test, get your results, and understand your strengths.
           </p>
         </div>
@@ -145,8 +162,8 @@
           <article class="step-card">
             <div class="step-illustration step-q">?</div>
             <div class="step-num">01</div>
-            <h3>Complete the test</h3>
-            <p>
+            <h3 data-i18n="step1.title">Complete the test</h3>
+            <p data-i18n="step1.text">
               Answer 40 progressively challenging questions inspired by Raven’s
               Progressive Matrices in 20 minutes or less.
             </p>
@@ -156,12 +173,12 @@
             <div class="mini-score-card">
               <div class="mini-score-top">
                 <span class="mini-number">120</span>
-                <span class="mini-label">IQ score</span>
+                <span class="mini-label" data-i18n="score.label">IQ score</span>
               </div>
             </div>
             <div class="step-num">02</div>
-            <h3>Get your IQ score</h3>
-            <p>
+            <h3 data-i18n="step2.title">Get your IQ score</h3>
+            <p data-i18n="step2.text">
               See your estimated IQ score, percentile rank, and a detailed
               breakdown of your answers.
             </p>
@@ -169,11 +186,11 @@
 
           <article class="step-card">
             <div class="profile-pills">
-              <span>Cognitive profile</span>
+              <span data-i18n="profile.label">Cognitive profile</span>
             </div>
             <div class="step-num">03</div>
-            <h3>Understand your strengths</h3>
-            <p>
+            <h3 data-i18n="step3.title">Understand your strengths</h3>
+            <p data-i18n="step3.text">
               Explore your cognitive profile, download your certificate, and
               improve with over 150 training exercises.
             </p>
@@ -183,22 +200,32 @@
 
       <section class="insights container">
         <div class="insight-copy">
-          <h2>See what your score really means.</h2>
-          <p>
+          <h2 data-i18n="insights.title">See what your score really means.</h2>
+          <p data-i18n="insights.subtitle">
             Discover where you stand, how you compare, and what your score
             means.
           </p>
 
           <ul class="check-list">
-            <li>Your IQ score on the distribution curve</li>
-            <li>Your percentile among other test takers</li>
-            <li>A plain-English explanation of your result</li>
-            <li>A detailed review of all 40 answers</li>
+            <li data-i18n="insights.item1">
+              Your IQ score on the distribution curve
+            </li>
+            <li data-i18n="insights.item2">
+              Your percentile among other test takers
+            </li>
+            <li data-i18n="insights.item3">
+              A plain-English explanation of your result
+            </li>
+            <li data-i18n="insights.item4">
+              A detailed review of all 40 answers
+            </li>
           </ul>
         </div>
 
         <div class="score-panel">
-          <div class="panel-heading">Your cognitive report</div>
+          <div class="panel-heading" data-i18n="report.title">
+            Your cognitive report
+          </div>
           <div class="distribution-visual">
             <div class="curve-area">
               <div class="curve-line"></div>
@@ -213,20 +240,22 @@
 
           <div class="stats-row">
             <div>
-              <span class="muted">Better than</span>
+              <span class="muted" data-i18n="report.better">Better than</span>
               <strong>91%</strong>
             </div>
             <div>
-              <span class="muted">Your IQ score</span>
+              <span class="muted" data-i18n="report.score">Your IQ score</span>
               <strong>120</strong>
             </div>
             <div>
-              <span class="muted">Points above average</span>
+              <span class="muted" data-i18n="report.above"
+                >Points above average</span
+              >
               <strong>+20</strong>
             </div>
           </div>
 
-          <p class="fine-print">
+          <p class="fine-print" data-i18n="report.note">
             Scores follow a normal distribution: average 100, standard deviation
             15.
           </p>
@@ -235,8 +264,8 @@
 
       <section class="content-section container">
         <div class="section-header centered">
-          <h2>Your cognitive blueprint.</h2>
-          <p>
+          <h2 data-i18n="blueprint.title">Your cognitive blueprint.</h2>
+          <p data-i18n="blueprint.subtitle">
             See how each cognitive skill translates into real-world advantages.
           </p>
         </div>
@@ -248,11 +277,11 @@
                 <div class="meter-value">44 <span>/100</span></div>
               </div>
               <div class="skill-meta">
-                <h3>Fluid reasoning</h3>
-                <span>Room to grow</span>
+                <h3 data-i18n="blueprint.skill1.title">Fluid reasoning</h3>
+                <span data-i18n="blueprint.skill1.level">Room to grow</span>
               </div>
             </div>
-            <p>
+            <p data-i18n="blueprint.skill1.text">
               Solving unfamiliar problems by identifying patterns and logical
               relationships.
             </p>
@@ -264,11 +293,11 @@
                 <div class="meter-value">62 <span>/100</span></div>
               </div>
               <div class="skill-meta">
-                <h3>Visual processing</h3>
-                <span>Solid</span>
+                <h3 data-i18n="blueprint.skill2.title">Visual processing</h3>
+                <span data-i18n="blueprint.skill2.level">Solid</span>
               </div>
             </div>
-            <p>
+            <p data-i18n="blueprint.skill2.text">
               Interpreting shapes, spatial relationships, and visual details.
             </p>
           </article>
@@ -279,45 +308,55 @@
                 <div class="meter-value">87 <span>/100</span></div>
               </div>
               <div class="skill-meta">
-                <h3>Working memory</h3>
-                <span>Your strength</span>
+                <h3 data-i18n="blueprint.skill3.title">Working memory</h3>
+                <span data-i18n="blueprint.skill3.level">Your strength</span>
               </div>
             </div>
-            <p>Holding and using information while completing a task.</p>
+            <p data-i18n="blueprint.skill3.text">
+              Holding and using information while completing a task.
+            </p>
           </article>
         </div>
       </section>
 
       <section class="ranking container">
         <div class="rank-copy">
-          <h2>Where you stand.</h2>
-          <p>See how you rank among millions of test takers.</p>
+          <h2 data-i18n="ranking.title">Where you stand.</h2>
+          <p data-i18n="ranking.subtitle">
+            See how you rank among millions of test takers.
+          </p>
 
           <ul class="check-list">
-            <li>
+            <li data-i18n="ranking.item1">
               Your rank, shown as the share of test takers you scored above
             </li>
-            <li>Where that places you in a room of 100 people</li>
-            <li>
+            <li data-i18n="ranking.item2">
+              Where that places you in a room of 100 people
+            </li>
+            <li data-i18n="ranking.item3">
               The same score, compared worldwide and within your own country
             </li>
           </ul>
         </div>
 
         <div class="rank-panel">
-          <div class="panel-heading">Your ranking</div>
+          <div class="panel-heading" data-i18n="ranking.panel">
+            Your ranking
+          </div>
           <div class="rank-blocks">
             <div>
-              <span>Worldwide</span>
+              <span data-i18n="ranking.worldwide">Worldwide</span>
               <strong>Top 9%</strong>
             </div>
             <div>
-              <span>Germany</span>
+              <span data-i18n="ranking.country">Germany</span>
               <strong>Top 10%</strong>
             </div>
           </div>
-          <p>You scored higher than 91% of myIQ test takers.</p>
-          <p class="fine-print">
+          <p data-i18n="ranking.result">
+            You scored higher than 91% of myIQ test takers.
+          </p>
+          <p class="fine-print" data-i18n="ranking.note">
             Based on myIQ test takers, not the general population.
           </p>
         </div>
@@ -325,30 +364,55 @@
 
       <section class="content-section container">
         <div class="historical-box">
-          <div class="historical-people" aria-label="Historical figures comparison gallery">
+          <div
+            class="historical-people"
+            aria-label="Historical figures comparison gallery"
+          >
             <div class="person person-1">
-              <img src="./assets/historical/lincoln.jpg" alt="Abraham Lincoln portrait" />
+              <img
+                src="./assets/historical/lincoln.jpg"
+                alt="Abraham Lincoln portrait"
+              />
             </div>
             <div class="person person-2">
-              <img src="./assets/historical/napoleon.png" alt="Napoleon portrait" />
+              <img
+                src="./assets/historical/napoleon.png"
+                alt="Napoleon portrait"
+              />
             </div>
             <div class="person person-3">
-              <img src="./assets/historical/washington.jpg" alt="George Washington portrait" />
+              <img
+                src="./assets/historical/washington.jpg"
+                alt="George Washington portrait"
+              />
             </div>
           </div>
           <div class="historical-info">
-            <div class="eyebrow">Also in your report</div>
-            <h3>Historical figures with similar scores.</h3>
-            <p>
+            <div class="eyebrow" data-i18n="historical.eyebrow">
+              Also in your report
+            </div>
+            <h3 data-i18n="historical.title">
+              Historical figures with similar scores.
+            </h3>
+            <p data-i18n="historical.subtitle">
               Thinkers, innovators and leaders whose estimated scores land near
               yours.
             </p>
             <div class="historical-list">
-              <button>Abraham Lincoln <strong>123</strong></button>
-              <button>Napoleon Bonaparte <strong>118</strong></button>
-              <button>George Washington <strong>113</strong></button>
+              <button>
+                <span data-i18n="historical.lincoln">Abraham Lincoln</span>
+                <strong>123</strong>
+              </button>
+              <button>
+                <span data-i18n="historical.napoleon">Napoleon Bonaparte</span>
+                <strong>118</strong>
+              </button>
+              <button>
+                <span data-i18n="historical.washington">George Washington</span>
+                <strong>113</strong>
+              </button>
             </div>
-            <p class="fine-print">
+            <p class="fine-print" data-i18n="historical.note">
               Estimated from Cox (1926) - retrospective approximations, not
               actual measurements.
             </p>
@@ -359,21 +423,33 @@
       <section class="content-section container">
         <div class="certificate-wrap">
           <div class="certificate-copy">
-            <div class="eyebrow with-icon">Verifiable credential</div>
-            <h2>Your certificate, ready to share.</h2>
-            <p>Download, verify, and share your achievement at any time.</p>
+            <div class="eyebrow with-icon" data-i18n="certificate.eyebrow">
+              Verifiable credential
+            </div>
+            <h2 data-i18n="certificate.title">
+              Your certificate, ready to share.
+            </h2>
+            <p data-i18n="certificate.subtitle">
+              Download, verify, and share your achievement at any time.
+            </p>
             <ul class="check-list compact">
-              <li>
+              <li data-i18n="certificate.item1">
                 A personalized certificate with your name, score, and completion
                 date
               </li>
-              <li>
+              <li data-i18n="certificate.item2">
                 A permanent certificate ID and scannable verification code
               </li>
-              <li>Downloadable certificate image and full PDF report</li>
-              <li>Easy to add to LinkedIn or share online</li>
+              <li data-i18n="certificate.item3">
+                Downloadable certificate image and full PDF report
+              </li>
+              <li data-i18n="certificate.item4">
+                Easy to add to LinkedIn or share online
+              </li>
             </ul>
-            <a href="#" class="text-link">Verify your results</a>
+            <a href="#" class="text-link" data-i18n="certificate.verify"
+              >Verify your results</a
+            >
           </div>
 
           <div class="certificate-card" aria-label="Sample IQ certificate">
@@ -399,20 +475,26 @@
 
       <section class="content-section container training-wrap">
         <div class="training-copy">
-          <h2>Training built on your results.</h2>
-          <p>
+          <h2 data-i18n="training.title">Training built on your results.</h2>
+          <p data-i18n="training.subtitle">
             Short exercises for reasoning, memory and processing speed, matched
             to your cognitive profile.
           </p>
           <ul class="check-list compact">
-            <li>3 exercises a day, 10 minutes total</li>
-            <li>Brain training games and 150+ exercises</li>
-            <li>Retakes whenever you want</li>
+            <li data-i18n="training.item1">
+              3 exercises a day, 10 minutes total
+            </li>
+            <li data-i18n="training.item2">
+              Brain training games and 150+ exercises
+            </li>
+            <li data-i18n="training.item3">Retakes whenever you want</li>
           </ul>
         </div>
 
         <div class="training-panel">
-          <div class="panel-heading">Your first session</div>
+          <div class="panel-heading" data-i18n="training.panel">
+            Your first session
+          </div>
           <ul class="session-list">
             <li>
               <span class="session-badge"></span>
@@ -444,22 +526,32 @@
 
       <section class="content-section container library-wrap">
         <div class="library-copy">
-          <h2>Build on your results.</h2>
-          <p>
+          <h2 data-i18n="library.title">Build on your results.</h2>
+          <p data-i18n="library.subtitle">
             Explore 17 practical courses designed to strengthen how you think,
             solve problems, create, and connect. All courses are included with
             your membership.
           </p>
           <ul class="check-list compact">
-            <li>Learn in just a few minutes at a time</li>
-            <li>Move seamlessly from one lesson to the next</li>
-            <li>Continue on any device without losing your place</li>
-            <li>Start confidently, with no prior knowledge needed</li>
+            <li data-i18n="library.item1">
+              Learn in just a few minutes at a time
+            </li>
+            <li data-i18n="library.item2">
+              Move seamlessly from one lesson to the next
+            </li>
+            <li data-i18n="library.item3">
+              Continue on any device without losing your place
+            </li>
+            <li data-i18n="library.item4">
+              Start confidently, with no prior knowledge needed
+            </li>
           </ul>
         </div>
 
         <div class="library-panel">
-          <div class="panel-heading">Your course library</div>
+          <div class="panel-heading" data-i18n="library.panel">
+            Your course library
+          </div>
           <div class="library-metrics">
             <div><strong>17</strong><span>courses</span></div>
             <div><strong>499</strong><span>lessons</span></div>
@@ -487,8 +579,8 @@
 
       <section id="reviews" class="reviews-section container">
         <div class="section-header centered">
-          <h2>What test takers say.</h2>
-          <p>
+          <h2 data-i18n="reviews.title">What test takers say.</h2>
+          <p data-i18n="reviews.subtitle">
             Verified reviews collected by Trustpilot from people who took the
             test.
           </p>
@@ -498,79 +590,110 @@
           <article class="review-card">
             <div class="review-top">
               <span class="rating">★★★★★</span>
-              <span class="invited-badge">Invited</span>
+              <span class="invited-badge" data-i18n="reviews.badge"
+                >Invited</span
+              >
             </div>
-            <h3>Coincidence? I don’t think so!</h3>
-            <p>
+            <h3 data-i18n="reviews.card1.title">
+              Coincidence? I don’t think so!
+            </h3>
+            <p data-i18n="reviews.card1.text">
               Your test is accurate - the IQ I got matches my real one within
               3%.
             </p>
-            <span class="review-author">Mirekiq · Czechia</span>
+            <span class="review-author" data-i18n="reviews.card1.author"
+              >Mirekiq · Czechia</span
+            >
           </article>
 
           <article class="review-card">
             <div class="review-top">
               <span class="rating">★★★★☆</span>
-              <span class="invited-badge">Invited</span>
+              <span class="invited-badge" data-i18n="reviews.badge"
+                >Invited</span
+              >
             </div>
-            <h3>Fun and interesting</h3>
-            <p>
+            <h3 data-i18n="reviews.card2.title">Fun and interesting</h3>
+            <p data-i18n="reviews.card2.text">
               Fun, quick and easy. Although I really wonder how accurate this
               is.
             </p>
-            <span class="review-author">Mbdaking · United States</span>
+            <span class="review-author" data-i18n="reviews.card2.author"
+              >Mbdaking · United States</span
+            >
           </article>
 
           <article class="review-card">
             <div class="review-top">
               <span class="rating">★★★★★</span>
-              <span class="invited-badge">Invited</span>
+              <span class="invited-badge" data-i18n="reviews.badge"
+                >Invited</span
+              >
             </div>
-            <h3>Short but challenging</h3>
-            <p>It was short but challenging. Really enjoyed it.</p>
-            <span class="review-author">E.B. · Greece</span>
+            <h3 data-i18n="reviews.card3.title">Short but challenging</h3>
+            <p data-i18n="reviews.card3.text">
+              It was short but challenging. Really enjoyed it.
+            </p>
+            <span class="review-author" data-i18n="reviews.card3.author"
+              >E.B. · Greece</span
+            >
           </article>
         </div>
 
         <div class="trustline">
-          <p>
+          <p data-i18n="reviews.trustline">
             Rated 4.1 / 5 based on 151,263 reviews. Showing our 3, 4 &amp; 5
             star reviews.
           </p>
-          <span>Trustpilot</span>
+          <span data-i18n="trustpilot">Trustpilot</span>
         </div>
       </section>
 
       <section id="pricing" class="pricing-section container">
         <div class="pricing-copy">
-          <h2>Everything you need in one plan.</h2>
-          <p>Start with a 7-day trial and get full access. Cancel anytime.</p>
+          <h2 data-i18n="pricing.title">Everything you need in one plan.</h2>
+          <p data-i18n="pricing.subtitle">
+            Start with a 7-day trial and get full access. Cancel anytime.
+          </p>
           <ul class="check-list compact">
-            <li>Detailed IQ score and results breakdown</li>
-            <li>Complete cognitive profile</li>
-            <li>Additional assessments for deeper personal insights</li>
-            <li>17 courses with 35+ hours of lessons</li>
-            <li>Brain training games with 150+ exercises</li>
-            <li>Shareable certificate</li>
+            <li data-i18n="pricing.item1">
+              Detailed IQ score and results breakdown
+            </li>
+            <li data-i18n="pricing.item2">Complete cognitive profile</li>
+            <li data-i18n="pricing.item3">
+              Additional assessments for deeper personal insights
+            </li>
+            <li data-i18n="pricing.item4">
+              17 courses with 35+ hours of lessons
+            </li>
+            <li data-i18n="pricing.item5">
+              Brain training games with 150+ exercises
+            </li>
+            <li data-i18n="pricing.item6">Shareable certificate</li>
           </ul>
         </div>
 
         <div class="pricing-card">
-          <div class="card-tag">Membership</div>
+          <div class="card-tag" data-i18n="pricing.cardtag">Membership</div>
           <div class="price-row">
             <div>
-              <span>Today</span>
+              <span data-i18n="pricing.today">Today</span>
               <strong>$1.00</strong>
-              <small>7-day trial</small>
+              <small data-i18n="pricing.trial">7-day trial</small>
             </div>
             <div>
-              <span>Then</span>
+              <span data-i18n="pricing.then">Then</span>
               <strong>$29.99</strong>
-              <small>every 28 days</small>
+              <small data-i18n="pricing.period">every 28 days</small>
             </div>
           </div>
-          <a href="#" class="btn btn-primary full">Start My IQ Test</a>
-          <p>
+          <a
+            href="quiz.html"
+            class="btn btn-primary full"
+            data-i18n="pricing.cta"
+            >Start My IQ Test</a
+          >
+          <p data-i18n="pricing.note">
             Your $1.00 trial lasts 7 days. Unless you cancel before it ends,
             your subscription renews automatically at $29.99 every 28 days.
           </p>
@@ -578,14 +701,18 @@
       </section>
 
       <section class="faq container" id="faq">
-        <h2>Questions, answered.</h2>
+        <h2 data-i18n="faq.title">Questions, answered.</h2>
         <div class="faq-grid">
           <div class="faq-column">
             <div class="faq-item open">
-              <button class="faq-question" aria-expanded="true">
+              <button
+                class="faq-question"
+                aria-expanded="true"
+                data-i18n="faq.q1"
+              >
                 What does my subscription include?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a1">
                 Your subscription includes a personalized IQ report and
                 certificate, full access to all tests, brain training games,
                 educational courses and progress tracking. Your results sync
@@ -593,30 +720,42 @@
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q2"
+              >
                 How do I cancel my subscription?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a2">
                 Cancel anytime from your profile or at myiq.com/cancellation.
                 Enter your email, verify the six digit code and confirm. You
                 will keep access until the end of your current paid period.
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q3"
+              >
                 Are my results private?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a3">
                 Yes. Your results are visible only to you unless you choose to
                 share them. Rankings are anonymous, and you can delete your
                 account and personal data at any time.
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q4"
+              >
                 What is a good IQ score?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a4">
                 The average IQ score is 100, and most people score between 85
                 and 115. A score above 100 is above average, while 130 or higher
                 is within approximately the top 2%.
@@ -626,39 +765,55 @@
 
           <div class="faq-column">
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q5"
+              >
                 Can you increase your IQ score?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a5">
                 Your score can improve with education, regular mental practice,
                 quality sleep and good health. Training can also strengthen
                 skills such as memory, focus and pattern recognition.
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q6"
+              >
                 Where do I find my results?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a6">
                 Your IQ score and certificate are available in your profile.
                 Once unlocked, you can download your report as a PDF.
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q7"
+              >
                 Does IQ change with age?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a7">
                 IQ is generally stable, but it can change over time. Processing
                 speed may decline with age, while vocabulary and accumulated
                 knowledge can continue to grow.
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                data-i18n="faq.q8"
+              >
                 Do you inherit your IQ from your parents?
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n="faq.a8">
                 Genetics play a role, but IQ is not determined by genes alone.
                 Education, health, environment and life experiences also
                 influence cognitive development.
@@ -671,12 +826,21 @@
       <section class="cta container">
         <div class="cta-inner">
           <div class="cta-copy">
-            <h2>Ready to find your IQ Score?</h2>
-            <p>40 questions. Up to 20 minutes. Your full profile at the end.</p>
+            <h2 data-i18n="cta.title">Ready to find your IQ Score?</h2>
+            <p data-i18n="cta.subtitle">
+              40 questions. Up to 20 minutes. Your full profile at the end.
+            </p>
           </div>
-          <a href="#" class="btn btn-primary large">Start My IQ Test</a>
+          <a
+            href="quiz.html"
+            class="btn btn-primary large"
+            data-i18n="cta.button"
+            >Start My IQ Test</a
+          >
         </div>
-        <p class="cta-note">Auto-renewing subscription. Cancel anytime.</p>
+        <p class="cta-note" data-i18n="cta.note">
+          Auto-renewing subscription. Cancel anytime.
+        </p>
       </section>
     </main>
 
@@ -697,55 +861,72 @@
             <a href="#" aria-label="Reddit">◌</a>
           </div>
 
-          <a href="#" class="text-link verify-link">Verify your results</a>
+          <a href="#" class="text-link verify-link" data-i18n="footer.verify"
+            >Verify your results</a
+          >
         </div>
 
         <div class="footer-column">
-          <h3>Product</h3>
+          <h3 data-i18n="footer.product">Product</h3>
           <ul>
-            <li><a href="#how-it-works">How it works</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li>
+              <a href="#how-it-works" data-i18n="nav.how">How it works</a>
+            </li>
+            <li><a href="#" data-i18n="footer.courses">Courses</a></li>
+            <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#faq" data-i18n="footer.faq">FAQ</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h3>Support</h3>
+          <h3 data-i18n="footer.support">Support</h3>
           <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">How to cancel</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-i18n="footer.help">Help</a></li>
+            <li><a href="#" data-i18n="footer.cancel">How to cancel</a></li>
+            <li><a href="#" data-i18n="footer.contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h3>Legal</h3>
+          <h3 data-i18n="footer.legal">Legal</h3>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer.terms">Terms of Service</a></li>
+            <li><a href="#" data-i18n="footer.cookies">Cookie Policy</a></li>
+            <li><a href="#" data-i18n="footer.refund">Refund Policy</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom container">
         <div class="legal-copy">
-          <p>
+          <p data-i18n="footer.legalText1">
             Copyright © 2024-2026 myIQ™. Envest Research Inc. 2093 Philadelphia
             Pike #3129, Claymont, DE 19703, United States.
           </p>
-          <p>
+          <p data-i18n="footer.legalText2">
             The test is for entertainment or educational purposes only and is
             not a substitute for professional evaluation.
           </p>
         </div>
-        <button class="language-button">English</button>
+        <label class="language-wrap" for="language-switcher">
+          <span class="sr-only" data-i18n="footer.languageLabel">Language</span>
+          <select
+            id="language-switcher"
+            class="language-button"
+            aria-label="Select language"
+          >
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="he">עברית</option>
+            <option value="it">Italiano</option>
+            <option value="ru">Русский</option>
+          </select>
+        </label>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
