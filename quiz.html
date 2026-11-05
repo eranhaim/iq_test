@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myIQ Quiz</title>
+    <title>yourIQ Quiz</title>
     <meta
       name="description"
-      content="myIQ-style IQ quiz interface with timed question flow and progress tracking."
+      content="IQ quiz with a timed question flow and progress tracking."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/i18n.js"></script>
   </head>
@@ -21,14 +22,14 @@
     <header class="quiz-header">
       <div class="quiz-header-inner container">
         <a href="index.html" class="brand quiz-brand" aria-label="Home">
-          <span class="brand-mark">
-            <span class="mark-circle"></span>
-            <span class="mark-circle small"></span>
-          </span>
-          <span class="brand-text">myIQ</span>
+          <img class="brand-logo" src="/assets/logo.svg" alt="" width="28" height="28" />
+          <span class="brand-text">yourIQ</span>
         </a>
 
-        <div class="quiz-timer" id="quizTimer" aria-live="polite">00:00</div>
+        <div class="quiz-meta">
+          <div class="quiz-counter" id="quizCounter"></div>
+          <div class="quiz-timer" id="quizTimer" aria-live="polite">00:00</div>
+        </div>
       </div>
 
       <div class="progress-track" aria-label="Test progress">
@@ -40,6 +41,7 @@
       <div id="quizScreen" class="quiz-screen" aria-live="polite"></div>
     </main>
 
+    <script src="/quiz-data.js"></script>
     <script src="/quiz.js"></script>
   </body>
 </html>
